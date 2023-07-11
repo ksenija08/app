@@ -54,9 +54,9 @@ for song in random_songs_dict:
     min_dict += random_song_dict_min     
 second = round(min_dict * 60)  
 time_format = str(datetime.timedelta(seconds = second))   
-print('Три песни звучат', round(min_dict, 2), 'минут') 
-print('Три песни:', ', ' .join(random_songs_dict),'звучат',round(min_dict, 2), 'минут') 
-print(time_format)
+print(f"Три песни звучат {round(min_dict, 2)} минут.") 
+print(f"Три песни: {', '.join(random_songs_dict)} - звучат {round(min_dict, 2)} минут.") 
+print(f"{round(min_dict, 2)} минут -> {time_format}")
 
 # Дополнительно для пунктов A и B
 # Пункт C.

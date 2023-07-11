@@ -28,7 +28,8 @@ elif number in months_2:
 elif number in months_3:
     print('Вы ввели', months[number-1] + '. 28 дней')    
 else:
-    print('Такого месяца нет!')   
+    print('Такого месяца нет!') 
+     
 # Второй вариант
 number = int(input('Введите номер месяца:'))
 months = {
