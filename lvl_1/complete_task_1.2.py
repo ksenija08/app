@@ -31,6 +31,7 @@ time_format = str(datetime.timedelta(seconds = second))
 print('Три песни звучат', round(min, 2), 'минут')  
 print('Три песни:', ', ' .join(random_song),'звучат',round(min, 2), 'минут')  
 print(time_format)
+print()
 
 # Пункт B. 
 # Есть словарь песен 
