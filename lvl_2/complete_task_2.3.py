@@ -11,11 +11,12 @@ figure = int(input('Введите цифру от 0 до 9: '))
 
 def switch_it_up(number):
 
-    nomber_figure = {1:'One', 2:'Two', 3:'Three', 4:'Four', 5:'Five', 6:'Six', 7:'Seven', 8:'Eight', 9:'Nine'}
-    switch_it_up = nomber_figure[number]
-    return switch_it_up
-  
-try:  
-    print (f"switch_it_up({figure}) -> '{switch_it_up(figure)}'")
-except KeyError: 
-        print (f"switch_it_up({figure}) -> None")  
+    nomber_figure = {0: '\'Null\'', 1:'\'One\'', 2:'\'Two\'', 3:'\'Three\'', 4:'\'Four\'', 5:'\'Five\'', 6:'\'Six\'', 7:'\'Seven\'', 8:'\'Eight\'', 9:'\'Nine\''}
+
+    try:
+         switch_it_up = nomber_figure[number]          
+         return switch_it_up
+    except KeyError: 
+     pass    
+    
+print (f"switch_it_up({figure}) -> {switch_it_up(figure)}")  
