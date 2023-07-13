@@ -10,12 +10,12 @@ number = int(input('Введите номер месяца: '))
 
 def quarter_of(month): 
 
-    nomber_month = {1:'январь', 2:'февраль', 3:'март', 4:'апрель', 5:'май', 6:'июнь', 7:'июль', 8:'август', 9:'сентябрь', 10:'октябрь', 11:'ноябрь', 12: 'декабрь'}
-    nomber_quarter = {1:'первого', 2:'второго', 3:'третьего', 4:'четвертого'}
+    nomber_month = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+    nomber_quarter = ['первого', 'второго', 'третьего', 'четвертого']
 
     if 1 <= month <= 12:
         quarter = (month+2) // 3 
-        quarter_str = 'Месяц ' + str(month) + ' (' + str(nomber_month[month]) + ') является частью ' + str(nomber_quarter[quarter])  + ' квартала'
+        quarter_str = 'Месяц ' + str(month) + ' (' + str(nomber_month[month - 1]) + ') является частью ' + str(nomber_quarter[quarter-1])  + ' квартала'
     else:
        quarter_str = 'Такого месяца нет!'
     return  quarter_str   
