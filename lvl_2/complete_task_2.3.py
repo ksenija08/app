@@ -11,7 +11,7 @@ figure = int(input('Введите цифру от 0 до 9: '))
 
 def switch_it_up(number):
 
-    nomber_figure = {0: '\'Null\'', 1:'\'One\'', 2:'\'Two\'', 3:'\'Three\'', 4:'\'Four\'', 5:'\'Five\'', 6:'\'Six\'', 7:'\'Seven\'', 8:'\'Eight\'', 9:'\'Nine\''}
+    nomber_figure = {0:"'Null'", 1:"'One'", 2: "'Tw'", 3:"'Three'", 4:"'Four'", 5:"'Five'", 6:"'Six'", 7:"'Seven'", 8:"'Eight'", 9:"'Nine'"}
 
     try:
          switch_it_up = nomber_figure[number]          
