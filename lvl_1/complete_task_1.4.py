@@ -27,10 +27,25 @@ for product in titles:
     p_q = store[code]
     sum_q = 0
     sum_p = 0
+    sum_p_q = 0
     for i in range(len(p_q)): 
         sum_q += p_q[i][list(p_q[i])[0]]   
         sum_p += p_q[i][list(p_q[i])[1]] 
-    print(product, '-', sum_q, 'шт, стоимость', sum_p, 'руб')    
+        sum_p_q += sum_q * sum_p
+    print(product, '-', sum_q, 'шт, стоимость', sum_p_q, 'руб')
+
+print('-'*10)
+for product, code in titles.items():
+    sum_q1 = 0
+    sum_p1 = 0
+    sum_p_q1 = 0
+    for p_q in store[code]: 
+        sum_q1 += p_q['quantity']
+        sum_p1 += p_q['price']
+        sum_p_q1 += sum_q1 * sum_p1
+    print(product, '-', sum_q1, 'шт, стоимость', sum_p_q1, 'руб')    
+    
+       
          
     
 # Рассчитайте на какую сумму лежит каждого товара на складе.
