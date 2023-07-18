@@ -13,11 +13,17 @@
 a = [int(s) for s in input('Введите список целых чисел через пробел: ').split()]
 
 def minimum(arr):
-    min_arr = min(arr)
+    min_arr = arr[0]
+    for i in range(len(arr)):
+        if arr[i] < min_arr:
+            min_arr = arr[i]
     return min_arr
 
 def maximum(arr):
-    max_arr = max(arr)
+    max_arr = arr[0]
+    for i in range(len(arr)):
+        if arr[i] > max_arr:
+            max_arr = arr[i]
     return max_arr
 
 print(f"{a} -> max = {maximum(a)}, min = {minimum(a)} ")
