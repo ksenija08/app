@@ -73,6 +73,6 @@ def get_school_student_info(Student_Id):
       else:
         print('Студента с таким ID не существует!')
     except (Exception, sqlite3.Error) as error:
-      print ("Ошибка в получении данных: ", error)
+      print ("Ошибка в получении данных: ", error)      
 
 get_school_student_info(Id_Student)
