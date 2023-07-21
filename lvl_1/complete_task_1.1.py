@@ -5,20 +5,12 @@ my_favorite_songs = 'Waste a Moment, Staying\' Alive, A Sorta Fairytale, Start M
 # Нельзя переопределять my_favorite_songs и запятая не должна выводиться.
 
 # Первый способ
-splited_my_favorite_songs = my_favorite_songs.split(', ')
-print('Первый трек: ' + splited_my_favorite_songs[0], 
-      'последний трек: ' + splited_my_favorite_songs[-1], 
-      'второй трек: ' + splited_my_favorite_songs[1], 
-      'второй с конца трек: ' + splited_my_favorite_songs[-2], sep = '\n')
-
-# Второй способ
-print()
 print('Первый трек: ' + my_favorite_songs[0:13], 
       'последний трек: ' + my_favorite_songs[64:77], 
       'второй трек: ' + my_favorite_songs[16:30], 
       'второй с конца трек: ' + my_favorite_songs[51:62], sep = '\n')
 
-# Третий способ
+# Второй способ
 i = []
 a = 0
 x = 1
@@ -33,7 +25,7 @@ print('Первый трек: ' + my_favorite_songs[0:i[0]],
       'второй трек: ' + my_favorite_songs[i[0]+2:i[1]], 
       'второй с конца трек: ' + my_favorite_songs[i[-2]+2:i[-1]], sep = '\n')
 
-# Четвертый способ
+# Третий способ
 print()
 print('Первый трек: ' + my_favorite_songs[:my_favorite_songs.find(',')], 
       'последний трек: ' + my_favorite_songs[my_favorite_songs.rfind(',')+2:-1], 

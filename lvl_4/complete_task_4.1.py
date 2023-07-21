@@ -12,18 +12,6 @@
 # 203, Анастасия, 3
 # 204, Игорь, 4
 
-
-#import sqlite3
-
-#connection = sqlite3.connect("teachers.db")
-#cursor = connection.cursor()
-#query_1 = """CREATE TABLE Students(Student_Id Integer, Student_Name Text, School_Id Integer Primary key);"""
-#cursor.execute(query_1)
-#query_2 = """INSERT INTO Students VALUES(201, 'Иван', 1),(202, 'Петр', 2),(203, 'Анастасия', 3),(204, 'Игорь', 4);"""
-#cursor.execute(query_2)
-#connection.commit()
-#connection.close()
-
 # Напишите программу, с помощью которой по ID студента можно получать информацию о школе и студенте.
 
 # Формат вывода:
@@ -34,14 +22,34 @@
 # Название школы:
 
 import sqlite3
-Id_Student = int(input('Введите номер студента: '))
+
 def get_connection():
   connection = sqlite3.connect("teachers.db")
   return connection
 
 def close_connection(connection):
   if connection:
-    connection.close()  
+    connection.close() 
+
+def create_table():
+  connection = get_connection()
+  cursor = connection.cursor()
+  cursor.execute("CREATE TABLE IF NOT EXISTS Students(Student_Id Integer, Student_Name Text, School_Id Integer Primary key);")
+  connection.commit()
+  connection.close()
+
+create_table()
+
+def insert_info():
+  connection = get_connection()
+  cursor = connection.cursor()
+  cursor.execute("INSERT INTO Students VALUES(201, 'Иван', 1),(202, 'Петр', 2),(203, 'Анастасия', 3),(204, 'Игорь', 4);")
+  connection.commit()
+  connection.close()
+
+#insert_info()  
+
+Id_Student = int(input('Введите номер студента: ')) 
 
 def get_school_student_info(Student_Id):
   
